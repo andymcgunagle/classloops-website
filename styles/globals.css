@@ -1,16 +1,104 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply animate-fade-in font-raleway overscroll-none;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
+  /* button component */
+  .button-base {
+    @apply px-2 py-1 rounded-[.25rem] w-fit active:translate-y-1 select-none;
+  }
+  .button-with-icon {
+    @apply flex gap-2 items-center;
+  }
+  .button-standard {
+    @apply button-base bg-gray-900 text-gray-50 shadow-md;
+  }
+  .button-outlined {
+    @apply button-base border-2 border-gray-900 text-gray-900 shadow-md;
+  }
+  .button-outlined-danger {
+    @apply button-base border-2 bg-red-100 border-red-900 text-red-900 shadow-md;
+  }
+  .button-outlined-success {
+    @apply button-base border-2 bg-green-100 border-green-900 text-green-900 shadow-md;
+  }
+  .button-text {
+    @apply button-base text-gray-900 hover:bg-gray-200 hover:rounded-full;
+  }
 
-* {
-  box-sizing: border-box;
+  /* card component */
+  .card-standard {
+    @apply flex flex-col gap-4 p-6 rounded-md shadow-lg;
+  }
+
+  /* form component */
+  .form-standard {
+    @apply flex flex-col items-center gap-4 w-full max-w-sm m-auto;
+  }
+
+  /* heading component */
+  .heading-h1 {
+    @apply text-4xl;
+  }
+  .heading-h2 {
+    @apply text-3xl;
+  }
+  .heading-h3 {
+    @apply text-2xl;
+  }
+  .heading-h4 {
+    @apply text-xl;
+  }
+  .heading-h5 {
+    @apply text-lg;
+  }
+  .heading-h6 {
+    @apply text-base;
+  }
+
+  /* icon component */
+  .icon-base {
+    @apply flex justify-center items-center rounded-full select-none;
+  }
+  .icon-sm {
+    @apply icon-base text-sm h-8 w-8 p-2;
+  }
+  .icon-lg {
+    @apply icon-base text-lg h-8 w-8 p-2;
+  }
+  .icon-3xl {
+    @apply icon-base text-3xl h-12 w-12 p-2;
+  }
+  .icon-gray {
+    @apply bg-gray-200 text-gray-900;
+  }
+  .icon-green {
+    @apply bg-green-100 text-green-900;
+  }
+  .icon-red {
+    @apply bg-red-100 text-red-900;
+  }
+
+  /* input component */
+  .input-standard {
+    @apply border-b-2 border-gray-900 p-2 w-full shadow-inner rounded-sm;
+  }
+
+  /* pill component */
+  .pill-standard {
+    @apply rounded-full w-fit shadow-md px-4 py-2 bg-white;
+  }
+
+  /* textarea component */
+  .textarea-standard {
+    @apply border-2 border-gray-200 rounded-md p-2 h-24 w-full resize-y;
+  }
 }
