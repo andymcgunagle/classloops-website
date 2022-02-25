@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "save": "git add . && git commit && git push origin main"
   },
   "dependencies": {
     "fork-ts-checker-webpack-plugin": "^7.2.1",
