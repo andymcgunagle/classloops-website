@@ -92,6 +92,11 @@
     @apply border-b-2 border-gray-900 p-2 w-full shadow-inner rounded-sm;
   }
 
+  /* layout component */
+  .layout-standard {
+    @apply flex flex-col gap-8 max-w-xl m-auto p-4 pb-8;
+  }
+
   /* pill component */
   .pill-standard {
     @apply rounded-full w-fit shadow-md px-4 py-1;

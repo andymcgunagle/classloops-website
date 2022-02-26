@@ -1,13 +1,14 @@
 import Head from 'next/head';
 
 export default function Layout({
+  additionalOuterContainerStyles,
   children,
-  containerStyles,
+  className = "layout-standard",
   content,
   title,
 }: LayoutProps) {
   return (
-    <div className={`${containerStyles}`}>
+    <div className={`${additionalOuterContainerStyles}`}>
       <Head>
         <title>{title}</title>
         <meta name="description" content={content} />
@@ -15,14 +16,17 @@ export default function Layout({
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
       </Head>
 
-      {children}
+      <main className={`${className}`}>
+        {children}
+      </main>
     </div>
   );
 };
 
 interface LayoutProps {
+  additionalOuterContainerStyles?: string,
   children: JSX.Element[] | JSX.Element,
-  containerStyles?: string,
+  className?: string,
   content: string,
   title: string,
 };

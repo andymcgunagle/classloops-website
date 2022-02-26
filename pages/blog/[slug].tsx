@@ -8,6 +8,8 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { createClient, EntryCollection } from 'contentful';
 import { IBlogPost, IBlogPostFields } from '../../@types/generated/contentful';
 import { BLOCKS, Node } from '@contentful/rich-text-types';
+import Link from 'next/link';
+import Layout from '../../components/_resuables/Layout';
 
 const BlogPost: NextPage<BlogPostProps> = ({ blogPost }) => {
 
@@ -37,31 +39,36 @@ const BlogPost: NextPage<BlogPostProps> = ({ blogPost }) => {
     },
   };
 
-  console.log(content);
-
   return (
-    <article className="flex flex-col gap-4 max-w-xl m-auto p-4">
-      <h2 className="heading-h2">
-        {title}
-      </h2>
-      <div className="flex gap-4">
-        <span>
-          {author}
-        </span>
-        <span>
-          {new Date(datePublished).toLocaleDateString()}
-        </span>
-      </div>
-      <Image
-        src={`http:${heroImage?.fields.file.url}`}
-        alt={heroImage?.fields.description}
-        width={heroImage?.fields.file.details.image?.width}
-        height={heroImage?.fields.file.details.image?.height}
-        priority
-      />
-      <div className="flex flex-col gap-4">
-        {documentToReactComponents(content, options)}
-      </div>
+    <Layout
+      content={`Blog post about ${title} written by ${author}`}
+      title={title}
+      className="layout-standard items-center"
+    >
+      <article className="flex flex-col gap-4">
+        <h2 className="heading-h2">
+          {title}
+        </h2>
+        <div className="flex gap-4">
+          <span>
+            {author}
+          </span>
+          <span>
+            {new Date(datePublished).toLocaleDateString()}
+          </span>
+        </div>
+        <Image
+          src={`http:${heroImage?.fields.file.url}`}
+          alt={heroImage?.fields.description}
+          width={heroImage?.fields.file.details.image?.width}
+          height={heroImage?.fields.file.details.image?.height}
+          priority
+        />
+        <div className="flex flex-col gap-4">
+          {documentToReactComponents(content, options)}
+        </div>
+      </article>
+
       <div className="flex gap-4">
         {tags.map((tag, index) => {
           return (
@@ -71,18 +78,29 @@ const BlogPost: NextPage<BlogPostProps> = ({ blogPost }) => {
           );
         })}
       </div>
-    </article>
+
+      <Link href="/blog" passHref>
+        <a className="button-text button-with-icon">
+          <span className="material-icons">
+            arrow_back
+          </span>
+          <span>
+            All posts
+          </span>
+        </a>
+      </Link>
+    </Layout>
   );
 };
 
-// Create client here so it can be used in both getStaticPaths and getStaticProps
-const client = createClient({
+// Create contentfulClient here so it can be used in both getStaticPaths and getStaticProps
+const contentfulClient = createClient({
   accessToken: process.env.CONTENTFUL_CONTENT_DELIVERY_API_ACCESS_TOKEN as string,
   space: process.env.CONTENTFUL_SPACE_ID as string,
 });
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const res: EntryCollection<IBlogPostFields> = await client.getEntries({
+  const res: EntryCollection<IBlogPostFields> = await contentfulClient.getEntries({
     content_type: 'blogPost',
   });
 
@@ -95,7 +113,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res: EntryCollection<IBlogPostFields> = await client.getEntries({
+  const res: EntryCollection<IBlogPostFields> = await contentfulClient.getEntries({
     content_type: 'blogPost',
     'fields.slug': context.params?.slug,
   });
