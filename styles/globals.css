@@ -94,7 +94,7 @@
 
   /* pill component */
   .pill-standard {
-    @apply rounded-full w-fit shadow-md px-4 py-2;
+    @apply rounded-full w-fit shadow-md px-4 py-1;
   }
 
   /* textarea component */

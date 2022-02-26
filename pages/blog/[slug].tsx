@@ -1,12 +1,81 @@
-import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+// Using Images from Contentful
+// https://www.youtube.com/watch?v=Mdx3ywlnzk8&list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1&index=5
 import Image from 'next/image';
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 
+// https://github.com/contentful/rich-text/tree/master/packages/rich-text-react-renderer
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { createClient, EntryCollection } from 'contentful';
 import { IBlogPost, IBlogPostFields } from '../../@types/generated/contentful';
+import { BLOCKS, Node } from '@contentful/rich-text-types';
 
-// https://www.npmjs.com/package/@contentful/rich-text-react-renderer
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+const BlogPost: NextPage<BlogPostProps> = ({ blogPost }) => {
 
+  const {
+    author,
+    content,
+    datePublished,
+    heroImage,
+    tags,
+    title,
+  } = blogPost.fields;
+
+  // Enables documentToReactComponents to render assets embedded in content using the Next.js image component 
+  const options = {
+    renderNode: {
+      [BLOCKS.EMBEDDED_ASSET]: (node: Node) => {
+        return (
+          <Image
+            src={`http:${node.data.target.fields.file.url}`}
+            alt={node.data.target.fields.description}
+            width={node.data.target.fields.file.details.image?.width}
+            height={node.data.target.fields.file.details.image?.height}
+            priority
+          />
+        );
+      },
+    },
+  };
+
+  console.log(content);
+
+  return (
+    <article className="flex flex-col gap-4 max-w-xl m-auto p-4">
+      <h2 className="heading-h2">
+        {title}
+      </h2>
+      <div className="flex gap-4">
+        <span>
+          {author}
+        </span>
+        <span>
+          {new Date(datePublished).toLocaleDateString()}
+        </span>
+      </div>
+      <Image
+        src={`http:${heroImage?.fields.file.url}`}
+        alt={heroImage?.fields.description}
+        width={heroImage?.fields.file.details.image?.width}
+        height={heroImage?.fields.file.details.image?.height}
+        priority
+      />
+      <div className="flex flex-col gap-4">
+        {documentToReactComponents(content, options)}
+      </div>
+      <div className="flex gap-4">
+        {tags.map((tag, index) => {
+          return (
+            <span key={index} className="pill-standard bg-blue-100">
+              {tag}
+            </span>
+          );
+        })}
+      </div>
+    </article>
+  );
+};
+
+// Create client here so it can be used in both getStaticPaths and getStaticProps
 const client = createClient({
   accessToken: process.env.CONTENTFUL_CONTENT_DELIVERY_API_ACCESS_TOKEN as string,
   space: process.env.CONTENTFUL_SPACE_ID as string,
@@ -17,9 +86,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     content_type: 'blogPost',
   });
 
-  const paths = res.items.map(item => {
-    return { params: { slug: item.fields.slug, }, };
-  });
+  const paths = res.items.map(item => ({ params: { slug: item.fields.slug, }, }));
 
   return {
     paths,
@@ -27,46 +94,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const res: EntryCollection<IBlogPostFields> = await client.getEntries({
     content_type: 'blogPost',
-    'fields.slug': params?.slug,
+    'fields.slug': context.params?.slug,
   });
 
-  return { props: { blogPost: res.items[0] }, };
-};
-
-const BlogPost: NextPage<BlogPostProps> = ({ blogPost }) => {
-  return (
-    <div>
-      <article className="flex flex-col gap-4">
-        <h2 className="heading-h2">
-          {blogPost.fields.title}
-        </h2>
-        {/* Using Images from Contentful */}
-        {/* https://www.youtube.com/watch?v=Mdx3ywlnzk8&list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1&index=5 */}
-        {/* <Image /> */}
-        <span>
-          {blogPost.fields.author}
-        </span>
-        <span>
-          {new Date(blogPost.fields.datePublished).toLocaleDateString()}
-        </span>
-        <div className="flex flex-col gap-4">
-          {documentToReactComponents(blogPost.fields.content)}
-        </div>
-        <div className="flex gap-4">
-          {blogPost.fields.tags.map((tag, index) => {
-            return (
-              <span key={index} className="pill-standard bg-blue-100">
-                {tag}
-              </span>
-            );
-          })}
-        </div>
-      </article>
-    </div>
-  );
+  return { props: { blogPost: res.items[0], }, };
 };
 
 interface BlogPostProps {
