@@ -45,7 +45,7 @@ const BlogPost: NextPage<BlogPostProps> = ({ blogPost }) => {
       title={title}
       className="layout-standard items-center"
     >
-      <article className="flex flex-col gap-4">
+      <article className="flex flex-col items-center gap-4">
         <h2 className="heading-h2">
           {title}
         </h2>
@@ -64,7 +64,7 @@ const BlogPost: NextPage<BlogPostProps> = ({ blogPost }) => {
           height={heroImage?.fields.file.details.image?.height}
           priority
         />
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col items-center gap-4">
           {documentToReactComponents(content, options)}
         </div>
       </article>
