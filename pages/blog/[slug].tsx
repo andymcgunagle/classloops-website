@@ -2,13 +2,14 @@
 // https://www.youtube.com/watch?v=Mdx3ywlnzk8&list=PL4cUxeGkcC9jClk8wl1yJcN3Zlrr8YSA1&index=5
 import Image from 'next/image';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import Link from 'next/link';
 
 // https://github.com/contentful/rich-text/tree/master/packages/rich-text-react-renderer
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { createClient, EntryCollection } from 'contentful';
 import { IBlogPost, IBlogPostFields } from '../../@types/generated/contentful';
-import { BLOCKS, Node } from '@contentful/rich-text-types';
-import Link from 'next/link';
+import { documentToReactComponents, Options } from '@contentful/rich-text-react-renderer';
+import { BLOCKS } from '@contentful/rich-text-types';
+
 import Layout from '../../components/_resuables/Layout';
 
 const BlogPost: NextPage<BlogPostProps> = ({ blogPost }) => {
@@ -23,19 +24,55 @@ const BlogPost: NextPage<BlogPostProps> = ({ blogPost }) => {
   } = blogPost.fields;
 
   // Enables documentToReactComponents to render assets embedded in content using the Next.js image component 
-  const options = {
+  const options: Options = {
     renderNode: {
-      [BLOCKS.EMBEDDED_ASSET]: (node: Node) => {
-        return (
-          <Image
-            src={`http:${node.data.target.fields.file.url}`}
-            alt={node.data.target.fields.description}
-            width={node.data.target.fields.file.details.image?.width}
-            height={node.data.target.fields.file.details.image?.height}
-            priority
-          />
-        );
-      },
+      [BLOCKS.EMBEDDED_ASSET]: (node) => (
+        <Image
+          src={`http:${node.data.target.fields.file.url}`}
+          alt={node.data.target.fields.description}
+          width={node.data.target.fields.file.details.image?.width}
+          height={node.data.target.fields.file.details.image?.height}
+          priority
+        />
+      ),
+      [BLOCKS.HR]: () => (
+        <hr className="w-full" />
+      ),
+      [BLOCKS.HEADING_3]: (node, children) => (
+        <h3 className="heading-h3">
+          {children}
+        </h3>
+      ),
+      [BLOCKS.HEADING_4]: (node, children) => (
+        <h4 className="heading-h4">
+          {children}
+        </h4>
+      ),
+      [BLOCKS.HEADING_5]: (node, children) => (
+        <h5 className="heading-h5">
+          {children}
+        </h5>
+      ),
+      [BLOCKS.HEADING_6]: (node, children) => (
+        <h6 className="heading-h6">
+          {children}
+        </h6>
+      ),
+      [BLOCKS.OL_LIST]: (node, children) => (
+        <ol className="flex flex-col gap-2 w-full px-8 list-decimal">
+          {children}
+        </ol>
+      ),
+      [BLOCKS.PARAGRAPH]: (node, children) => (
+        <p className="w-full">
+          {children}
+        </p>
+      ),
+      [BLOCKS.UL_LIST]: (node, children) => (
+        <ul className="flex flex-col gap-2 w-full px-8 list-disc">
+          {children}
+        </ul>
+      ),
     },
   };
 
