@@ -23,7 +23,7 @@
 @layer components {
   /* button component */
   .button-base {
-    @apply px-2 py-1 rounded-[.25rem] w-fit active:translate-y-1 select-none;
+    @apply px-4 py-1 rounded-[.25rem] w-fit active:translate-y-1 select-none;
   }
   .button-with-icon {
     @apply flex gap-2 items-center;
@@ -115,5 +115,11 @@
   /* textarea component */
   .textarea-standard {
     @apply border-2 border-gray-200 rounded-md p-2 h-24 w-full resize-y;
+  }
+}
+
+@layer utilities {
+  .section-content-wrapper {
+    @apply max-w-7xl m-auto p-8;
   }
 }

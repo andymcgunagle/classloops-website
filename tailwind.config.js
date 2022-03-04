@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'fade-in': 'fade-in 0.75s ease-in',
+        'fade-in': 'fade-in 0.5s ease-in',
+        'slide-up': 'slide-up 0.5s ease-out',
       },
       fontFamily: {
         // montserrat: ['Montserrat', 'sans-serif'],
@@ -18,6 +19,10 @@ module.exports = {
         'fade-in': {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        'slide-up': {
+          '0%': { transform: 'translateY(50%)' },
+          '100%': { transform: 'translateY(0%)' },
         },
       },
     },
