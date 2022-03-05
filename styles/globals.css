@@ -119,7 +119,7 @@
 }
 
 @layer utilities {
-  .section-content-wrapper {
+  .content-wrapper {
     @apply max-w-7xl m-auto p-8;
   }
 }
