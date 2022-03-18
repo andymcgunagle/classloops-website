@@ -120,6 +120,6 @@
 
 @layer utilities {
   .content-wrapper {
-    @apply max-w-7xl m-auto p-8;
+    @apply max-w-7xl mx-auto p-8;
   }
 }

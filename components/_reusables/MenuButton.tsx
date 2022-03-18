@@ -3,7 +3,7 @@ export default function MenuButton({
   showMainNav,
 }: MenuButtonProps) {
   return (
-    <button className="icon-3xl icon-gray lg:hidden" onClick={() => setShowMainNav(!showMainNav)}>
+    <button className="icon-3xl bg-white text-gray-900 lg:hidden" onClick={() => setShowMainNav(!showMainNav)}>
       <span className="material-icons icon-lg">
         {showMainNav ? 'close' : 'menu'}
       </span>

@@ -6,6 +6,7 @@ export default function HeroTextContent() {
       </h1>
       <p className="flex flex-wrap gap-1">
         <span>Simultaneously loop up to 9 YouTube or Vimeo videos.</span>
+        <span>Airplay from a tablet or computer to a TV in your studio.</span>
       </p>
       <div className="flex gap-4 animate-slide-up">
         <button className="button-standard">
