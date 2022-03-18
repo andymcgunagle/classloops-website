@@ -11,19 +11,19 @@ export default function HeroTextContent() {
       <div className="flex gap-4 animate-slide-up">
         <button className="button-standard">
           <a
-            href="https://app.classloops.com"
+            href="https://app.classloops.com/sign-up"
             target="_blank"
             rel="noreferrer"
           >
             Get started
           </a>
         </button>
-        <button className="button-outlined button-with-icon">
+        {/* <button className="button-outlined button-with-icon">
           <span className="material-icons icon-sm icon-green">
             play_arrow
           </span>
           <span>See how it works</span>
-        </button>
+        </button> */}
       </div>
     </div>
   );

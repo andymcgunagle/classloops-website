@@ -1,7 +1,7 @@
-import Footer from './../components/_reusables/Footer';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
+import Footer from './../components/_reusables/Footer';
 import Header from '../components/_reusables/Header';
 import HeroImages from './../components/HeroImages';
 import HeroTextContent from './../components/HeroTextContent';
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>Classloops</title>
-        <meta name="description" content="Write description here" />
+        <meta name="description" content="Software that enables fitness studios to loop multiple exercise demo videos on a TV during their classes." />
       </Head>
 
       <Header />
@@ -25,7 +25,5 @@ const Home: NextPage = () => {
     </div>
   );
 };
-
-// md:min-h-[calc(100vh-12rem)]
 
 export default Home;
