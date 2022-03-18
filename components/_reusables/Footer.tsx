@@ -10,10 +10,10 @@ export default function Footer({ }) {
             Created by Andy McGunagle
           </a>
           <a href="https://www.linkedin.com/in/andy-mcgunagle/" target="_blank" rel="noreferrer">
-            Andy's LinkedIn
+            Andy&apos;s LinkedIn
           </a>
           <a href="https://github.com/andymcgunagle" target="_blank" rel="noreferrer">
-            Andy's GitHub
+            Andy&apos;s GitHub
           </a>
         </div>
       </div>
