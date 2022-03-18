@@ -10,7 +10,7 @@ import { IBlogPost, IBlogPostFields } from '../../@types/generated/contentful';
 import { documentToReactComponents, Options } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 
-import Layout from '../../components/_resuables/Layout';
+import Layout from '../../components/_reusables/Layout';
 
 const BlogPost: NextPage<BlogPostProps> = ({ blogPost }) => {
 

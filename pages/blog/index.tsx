@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { createClient, EntryCollection } from 'contentful';
 import { IBlogPost, IBlogPostFields } from '../../@types/generated/contentful';
-import Layout from '../../components/_resuables/Layout';
+import Layout from '../../components/_reusables/Layout';
 
 const BlogPostIndex: NextPage<BlogPostIndexProps> = ({ blogPosts }) => {
   return (

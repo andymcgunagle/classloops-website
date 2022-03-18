@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import Footer from './../components/_resuables/Footer';
-import Header from '../components/_resuables/Header';
+import Footer from '../components/_reusables/Footer';
+import Header from '../components/_reusables/Header';
 import HeroImages from './../components/HeroImages';
 import HeroTextContent from './../components/HeroTextContent';
-import Section from '../components/_resuables/Section';
+import Section from '../components/_reusables/Section';
 
 const Home: NextPage = () => {
   return (
