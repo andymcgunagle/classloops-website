@@ -2,10 +2,10 @@ export default function LogoAndName() {
   return (
     <div className="flex items-center gap-2">
       <span className="material-icons">
-        rocket
+        loop
       </span>
       <h3 className="heading-h3">
-        GENERIC STARTUP
+        Classloops
       </h3>
     </div>
   );
