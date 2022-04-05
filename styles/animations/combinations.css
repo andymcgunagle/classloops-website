@@ -1,0 +1,3 @@
+.animation-fade-in.animation-slide-in-up{
+  animation: var(--animation-fade-in), var(--animation-slide-in-up);
+}

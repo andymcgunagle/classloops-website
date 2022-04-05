@@ -21,15 +21,28 @@ const Wrapper = styled.div`
     border-radius: var(--border-radius-4);
   }
 
+  &::before {
+    position: absolute;
+    top: 50%;
+
+    animation: var(--animation-fade-in);
+    content: "loop";
+    font-family: 'Material Icons Round';
+    font-size: 32.5rem;
+    color: var(--clr-brand-700);
+    transform: translateY(-50%);
+    z-index: 9998;
+  }
+
   &::after {
     content: '';
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-
+    
     animation: var(--animation-fade-in);
-    height: 20rem;
-    width: 20rem;
+    height: 25rem;
+    width: 25rem;
     background-color: var(--clr-brand-200);
     border-radius: var(--border-radius-full);
   }
@@ -39,15 +52,19 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 1280px) {
+    &::before {
+      font-size: 50rem;
+    }
+
     &::after {
-      height: 30rem;
-      width: 30rem;
+      height: 35rem;
+      width: 35rem;
     }
   }
 `;
 
 const ScreenShotWrapper = styled.div`
-  border: var(--border-width-10) solid var(--clr-gray-900);
+  border: var(--border-width-10) solid var(--clr-gray-800);
   max-width: 400px;
   width: 100%;
   z-index: 9999;
@@ -55,8 +72,8 @@ const ScreenShotWrapper = styled.div`
   
   @media (min-width: 1280px) {
     position: absolute;
-    bottom: -1rem;
-    left: 3rem;
+    bottom: 0rem;
+    left: 2rem;
   }
 `;
 
@@ -68,8 +85,8 @@ const ClassImageWrapper = styled.div`
 
   @media only screen and (min-width: 1280px) {
     position: absolute;
-    top: -1rem;
-    left: 9rem;
+    top: -3rem;
+    left: 10.5rem;
     display: block;
   }
 `;

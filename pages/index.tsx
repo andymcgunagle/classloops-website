@@ -13,6 +13,7 @@ const Main = styled.main`
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
+  gap: var(--space-12);
   
   height: calc(100vh - var(--space-14));
   margin: 0 auto;
