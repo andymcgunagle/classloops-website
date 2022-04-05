@@ -5,7 +5,7 @@ export default function LogoAndName() {
         loop
       </span>
       <h3 className="font-10 font-weight-6">
-        Classloops
+        ClassLoops
       </h3>
     </div>
   );

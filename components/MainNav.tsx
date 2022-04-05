@@ -1,23 +1,21 @@
 import styled from 'styled-components';
 
 const Nav = styled.nav<MainNavProps>`
-  display: flex;
+  display: ${props => props.showMainNav ? "flex" : "none"};
   flex-direction: column;
   align-items: flex-end;
   gap: var(--space-4);
 
   position: absolute;
-  top: var(--space-12);
-  right: var(--space-2);
+  top: var(--space-14);
+  right: var(--space-6);
 
-  display: ${props => props.showMainNav ? "flex" : "none"};
 
   @media only screen and (min-width: 768px) {
+    display: flex;
     flex-direction: row;
 
     position: static;
-    
-    display: flex;
   }
 `;
 

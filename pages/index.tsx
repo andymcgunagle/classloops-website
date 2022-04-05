@@ -30,7 +30,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Classloops</title>
+        <title>ClassLoops</title>
         <meta name="description" content="Software that enables fitness studios to loop multiple exercise demo videos on a TV during their classes." />
       </Head>
 

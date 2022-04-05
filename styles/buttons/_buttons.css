@@ -17,10 +17,6 @@ button {
   user-select: none;
   width: fit-content;
 }
-
-button * {
-  color: inherit;
-}
   
 button:active {
   transform: translateY(0.125rem);
