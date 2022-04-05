@@ -27,6 +27,7 @@
   line-height: 1.33;
   list-style: decimal inside;
   margin: 0;
+  overscroll-behavior-y: none;
   padding: 0;
   /* scroll-snap-type: y mandatory; */
 }

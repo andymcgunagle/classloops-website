@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   }
 
   &::before {
-    position: fixed;
+    position: absolute;
 
     display: inline-block;
     animation: var(--animation-fade-in), var(--animation-spin);
