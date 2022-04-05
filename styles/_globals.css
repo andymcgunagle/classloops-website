@@ -1,0 +1,35 @@
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import './anchors.css';
+@import './buttons/_buttons.css';
+@import './cards.css';
+@import './custom-properties.css';
+@import './flexbox/_flexbox.css';
+@import './fonts/_fonts.css';
+@import './helpers.css';
+@import './icons.css';
+@import './inputs.css';
+@import './keyframes.css';
+@import './lists.css';
+@import './modals.css';
+@import './shapes.css';
+@import './titled-section.css';
+
+* {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  color: var(--clr-gray-900);
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira, Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-4);
+  line-height: 1.33;
+  list-style: decimal inside;
+  margin: 0;
+  padding: 0;
+  /* scroll-snap-type: y mandatory; */
+}
+
+body {
+  background-color: var(--clr-white);
+}

@@ -1,10 +1,30 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-import Footer from './../components/_reusables/Footer';
-import Header from '../components/_reusables/Header';
+import styled from 'styled-components';
+
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 import HeroImages from './../components/HeroImages';
 import HeroTextContent from './../components/HeroTextContent';
+
+const Main = styled.main`
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  
+  height: calc(100vh - var(--space-14));
+  margin: 0 auto;
+  max-width: var(--breakpoint-8);
+  padding: 0 var(--space-6);
+  
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    padding-bottom: var(--space-12);
+  }
+`;
 
 const Home: NextPage = () => {
   return (
@@ -16,10 +36,10 @@ const Home: NextPage = () => {
 
       <Header />
 
-      <main className="bg-white content-wrapper grid gap-8 space-y-2 md:space-y-0 md:grid md:grid-cols-2 md:items-center md:gap-24 md:min-h-[calc(100vh-6rem)] md:pb-44 xl:pb-28 xl:min-h-[calc(100vh-6rem)]">
+      <Main>
         <HeroTextContent />
         <HeroImages />
-      </main>
+      </Main>
 
       <Footer />
     </div>

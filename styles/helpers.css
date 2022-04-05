@@ -1,0 +1,33 @@
+.border {
+  border: 1px solid red;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.inherit {
+  color: inherit;
+}
+
+.inner-wrapper {
+  max-width: var(--breakpoint-8);
+  margin: 0 auto;
+}
+
+.max-width-600 {
+  max-width: 600px;
+};
+
+.fit-content {
+  max-width: fit-content;
+};
+
+.screen-height {
+  block-size: 100vh;
+  scroll-snap-align: center;
+}
+
+.width-100 {
+  width: 100%;
+}

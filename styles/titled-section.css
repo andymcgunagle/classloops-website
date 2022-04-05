@@ -1,0 +1,9 @@
+.titled-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-0);
+}
+
+.titled-section > :first-child {
+  text-align: center;
+}

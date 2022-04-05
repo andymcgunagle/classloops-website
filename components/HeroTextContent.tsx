@@ -1,23 +1,30 @@
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  animation: var(--animation-slide-in-up), var(--animation-fade-in);
+  z-index: 9998;
+`;
+
 export default function HeroTextContent() {
   return (
-    <div className="flex flex-col gap-4 lg:self-center max-w-lg">
-      <h1 className="heading-h1 flex flex-col">
-        <span>Easily loop exercise demo videos during your classes.</span>
+    <Wrapper className="card brand column-left gap-4 max-width-600">
+      <h1 className="font-14">
+        Easily loop exercise demo videos during your classes.
       </h1>
-      <p className="flex flex-wrap gap-1">
+      <div className="column-left gap-0">
         <span>Simultaneously loop up to 9 YouTube or Vimeo videos.</span>
         <span>Airplay from a tablet or computer to a TV in your studio.</span>
-      </p>
-      <div className="flex gap-4 animate-slide-up">
-        <button className="button-standard">
-          <a
-            href="https://app.classloops.com/sign-up"
-            target="_blank"
-            rel="noreferrer"
-          >
+      </div>
+      <div>
+        <a
+          href="https://app.classloops.com/sign-up"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="light">
             Get started
-          </a>
-        </button>
+          </button>
+        </a>
         {/* <button className="button-outlined button-with-icon">
           <span className="material-icons icon-sm icon-green">
             play_arrow
@@ -25,6 +32,6 @@ export default function HeroTextContent() {
           <span>See how it works</span>
         </button> */}
       </div>
-    </div>
+    </Wrapper>
   );
 };
