@@ -19,7 +19,7 @@
   --animation-slide-out-left: slide-out-left 0.5s ease-in;
   --animation-slide-out-right: slide-out-right 0.5s ease-in;
   --animation-slide-out-up: slide-out-up 0.5s ease-in;
-  --animation-spin: spin 2s linear infinite;
+  --animation-spin: spin 7.5s linear infinite;
 
   /* Border Radius */
   --border-radius-0: 0.25rem;

@@ -15,22 +15,19 @@ const Wrapper = styled.div`
 
   & > * {
     animation: var(--animation-slide-in-up), var(--animation-fade-in);
-  }
-  
-  & * {
-    border-radius: var(--border-radius-4);
+    border-radius: var(--border-radius-2);
+    box-shadow: var(--box-shadow-8);
   }
 
   &::before {
-    position: absolute;
-    top: 50%;
+    position: fixed;
 
-    animation: var(--animation-fade-in);
+    display: inline-block;
+    animation: var(--animation-fade-in), var(--animation-spin);
     content: "loop";
     font-family: 'Material Icons Round';
     font-size: 32.5rem;
     color: var(--clr-brand-700);
-    transform: translateY(-50%);
     z-index: 9998;
   }
 
@@ -41,6 +38,7 @@ const Wrapper = styled.div`
     transform: translateY(-50%);
     
     animation: var(--animation-fade-in);
+    box-shadow: var(--box-shadow-10);
     height: 25rem;
     width: 25rem;
     background-color: var(--clr-brand-200);
@@ -53,7 +51,7 @@ const Wrapper = styled.div`
 
   @media (min-width: 1280px) {
     &::before {
-      font-size: 50rem;
+      font-size: 47.5rem;
     }
 
     &::after {
@@ -78,6 +76,7 @@ const ScreenShotWrapper = styled.div`
 `;
 
 const ClassImageWrapper = styled.div`
+  border: var(--border-width-10) solid var(--clr-gray-700);
   display: none;
   max-width: 400px;
   width: 100%;
