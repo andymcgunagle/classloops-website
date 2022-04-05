@@ -1,6 +1,6 @@
 export default function LogoAndName() {
   return (
-    <div className="flex gap-0">
+    <div className="flex items-center gap-0">
       <span className="material-icons-round font-10">
         loop
       </span>
