@@ -13,17 +13,21 @@ const Main = styled.main`
   grid-template-columns: 1fr;
   align-items: center;
   justify-items: center;
-  gap: var(--space-12);
+  gap: var(--space-16);
   
-  height: calc(100vh - var(--space-14));
+  height: 100vh;
   margin: 0 auto;
-  max-width: var(--breakpoint-8);
-  padding: 0 var(--space-6);
+  padding: var(--space-6) var(--space-4);
+  padding-bottom: var(--space-16);
   
   @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-8);
+    gap: var(--space-12);
+
+    height: calc(100vh - var(--space-14));
+    padding: 0 var(--space-4);
     padding-bottom: var(--space-12);
+    max-width: var(--breakpoint-8);
   }
 `;
 
@@ -33,6 +37,7 @@ const Home: NextPage = () => {
       <Head>
         <title>ClassLoops</title>
         <meta name="description" content="Software that enables fitness studios to loop multiple exercise demo videos on a TV during their classes." />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
 
       <Header />

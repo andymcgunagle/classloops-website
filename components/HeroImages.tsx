@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   gap: var(--space-4);
   align-self: start;
 
-  width: 100%;
+  width: 80%;
   position: relative;
 
   & > * {
@@ -22,13 +22,15 @@ const Wrapper = styled.div`
   &::before {
     position: absolute;
 
-    display: inline-block;
     animation: var(--animation-fade-in), var(--animation-spin);
-    content: "loop";
-    font-family: 'Material Icons Round';
-    font-size: 32.5rem;
     color: var(--clr-brand-700);
-    z-index: 9998;
+    content: "loop";
+    display: inline-block;
+    font-family: 'Material Icons Round';
+    font-size: 20rem;
+    height: 0;
+    line-height: 0;
+    width: fit-content;
   }
 
   &::after {
@@ -38,15 +40,18 @@ const Wrapper = styled.div`
     transform: translateY(-50%);
     
     animation: var(--animation-fade-in);
-    box-shadow: var(--box-shadow-10);
-    height: 25rem;
-    width: 25rem;
     background-color: var(--clr-brand-200);
     border-radius: var(--border-radius-full);
+    box-shadow: var(--box-shadow-10);
+    height: 20rem;
+    width: 20rem;
+    z-index: -1;
   }
 
   @media (min-width: 768px) {
     align-self: center;
+    width: 100%;
+
   }
 
   @media (min-width: 1280px) {
@@ -65,7 +70,6 @@ const ScreenShotWrapper = styled.div`
   border: var(--border-width-10) solid var(--clr-gray-800);
   max-width: 400px;
   width: 100%;
-  z-index: 9999;
   background-color: var(--clr-white);
   
   @media (min-width: 1280px) {
@@ -80,7 +84,6 @@ const ClassImageWrapper = styled.div`
   display: none;
   max-width: 400px;
   width: 100%;
-  z-index: 9998;
 
   @media only screen and (min-width: 1280px) {
     position: absolute;

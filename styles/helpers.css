@@ -21,15 +21,10 @@
 
 .fit-content {
   max-width: fit-content;
-};
-
-.screen-height {
-  block-size: 100vh;
-  scroll-snap-align: center;
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .width-100 {
