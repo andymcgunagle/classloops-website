@@ -18,14 +18,16 @@
 
 * {
   box-sizing: border-box;
-  color: var(--clr-gray-900);
+  color: var(--clr-gray-700);
   font-family: 'Raleway', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira, Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: var(--font-size-4);
   font-weight: var(--font-weight-4);
   line-height: 1.33;
   list-style: decimal inside;
   margin: 0;
+  overscroll-behavior: none;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {

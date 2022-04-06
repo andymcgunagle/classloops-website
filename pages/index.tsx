@@ -36,8 +36,8 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>ClassLoops</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Software that enables fitness studios to loop multiple exercise demo videos on a TV during their classes." />
-        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
 
       <Header />

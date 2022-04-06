@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.button`
   position: absolute;
-  top: var(--space-6);
+  top: var(--space-4);
   right: var(--space-6);
 
   @media only screen and (min-width: 768px) {
@@ -17,7 +17,7 @@ export default function MenuButton({
   return (
     <Wrapper
       onClick={() => setShowMainNav(!showMainNav)}
-      className="shape circle"
+      className="shape circle large"
     >
       <span className="material-icons-round">
         {showMainNav ? 'close' : 'menu'}

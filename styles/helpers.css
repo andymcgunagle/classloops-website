@@ -7,7 +7,7 @@
 }
 
 .inherit {
-  color: inherit;
+  color: inherit !important;
 }
 
 .inner-wrapper {

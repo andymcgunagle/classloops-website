@@ -10,8 +10,8 @@ const Wrapper = styled.div`
   gap: var(--space-4);
   align-self: start;
 
-  width: 80%;
   position: relative;
+  width: 100%;
 
   & > * {
     animation: var(--animation-slide-in-up), var(--animation-fade-in);
@@ -28,21 +28,17 @@ const Wrapper = styled.div`
     display: inline-block;
     font-family: 'Material Icons Round';
     font-size: 20rem;
-    height: 0;
     line-height: 0;
-    width: fit-content;
   }
 
   &::after {
-    content: '';
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     
     animation: var(--animation-fade-in);
     background-color: var(--clr-brand-200);
     border-radius: var(--border-radius-full);
     box-shadow: var(--box-shadow-10);
+    content: '';
     height: 20rem;
     width: 20rem;
     z-index: -1;
@@ -50,8 +46,6 @@ const Wrapper = styled.div`
 
   @media (min-width: 768px) {
     align-self: center;
-    width: 100%;
-
   }
 
   @media (min-width: 1280px) {
@@ -67,10 +61,12 @@ const Wrapper = styled.div`
 `;
 
 const ScreenShotWrapper = styled.div`
-  border: var(--border-width-10) solid var(--clr-gray-800);
+  background-color: var(--clr-white);
+  border: var(--border-width-10) solid var(--clr-gray-700);
   max-width: 400px;
   width: 100%;
   background-color: var(--clr-white);
+  z-index: 1;
   
   @media (min-width: 1280px) {
     position: absolute;
@@ -80,6 +76,7 @@ const ScreenShotWrapper = styled.div`
 `;
 
 const ClassImageWrapper = styled.div`
+  background-color: var(--clr-white);
   border: var(--border-width-10) solid var(--clr-gray-700);
   display: none;
   max-width: 400px;
