@@ -9,6 +9,7 @@ const Card = styled.div`
   justify-content: center;
   gap: var(--space-6);
 
+  animation: var(--animation-fade-in);
   margin-inline: auto;
   max-width: 600px;
   position: relative;

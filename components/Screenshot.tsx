@@ -3,8 +3,7 @@ import Image from "next/image";
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-
-  
+  animation: var(--animation-slide-in-right);
   background-color: var(--clr-white);
   background-color: var(--clr-white);
   border-radius: var(--border-radius-4);
