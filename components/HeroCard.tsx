@@ -19,12 +19,15 @@ const Card = styled.div`
   }
 
   & > span.material-icons-round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     animation: var(--animation-spin);
     background-color: var(--clr-brand-700);
     border-radius: var(--border-radius-full);
     color: var(--clr-brand-50);
     height: var(--space-12);
-    line-height: 0;
     width: var(--space-12);
   }
 
