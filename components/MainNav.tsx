@@ -5,11 +5,11 @@ const Nav = styled.nav<MainNavProps>`
   flex-direction: column;
   align-items: flex-end;
   gap: var(--space-6);
-
+  
   position: absolute;
   top: var(--space-14);
   right: var(--space-6);
-
+  
   background-color: var(--clr-white);
   border-radius: var(--border-radius-2);
   box-shadow: var(--box-shadow-8);
@@ -20,6 +20,7 @@ const Nav = styled.nav<MainNavProps>`
   @media only screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
+    gap: var(--space-4);
 
     position: static;
 
@@ -51,7 +52,7 @@ export default function MainNav({
           target="_blank"
           rel="noreferrer"
         >
-          Get started
+          Free Trial
         </a>
       </button>
     </Nav>

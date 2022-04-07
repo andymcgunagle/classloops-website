@@ -80,15 +80,18 @@ const Home: NextPage = () => {
               Simultaneously loop up to 9 <span className="font-weight-10">YouTube</span> or <span className="font-weight-10">Vimeo</span> videos.
             </p>
             <p className="font-6">
-              Airplay from a phone, tablet, or computer to a TV in your studio.
+              <span className="font-weight-10">Airplay</span> from a phone, tablet, or computer to a TV in your studio.
+            </p>
+            <p className="font-6">
+              Add your own <span className="font-weight-10">custom branding</span> in minutes.
             </p>
             <a
               href="https://app.classloops.com/sign-up"
               target="_blank"
               rel="noreferrer"
             >
-              <button>
-                Get started
+              <button className="font-6">
+                Free Trial
               </button>
             </a>
           </Card>
