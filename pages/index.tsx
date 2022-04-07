@@ -5,35 +5,61 @@ import styled from 'styled-components';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import HeroImages from './../components/HeroImages';
-import HeroTextContent from './../components/HeroTextContent';
+import Screenshot from '../components/Screenshot';
 
-const Main = styled.main`
-  display: grid;
-  grid-template-columns: 1fr;
+const Page = styled.div`
+  min-height: 100vh;
+`;
+
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
-  gap: var(--space-16);
-  
-  height: 100vh;
-  margin: 0 auto;
-  padding: var(--space-6) var(--space-4);
-  padding-bottom: var(--space-16);
-  
-  @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-12);
+  justify-content: center;
 
-    height: calc(100vh - var(--space-14));
-    padding: 0 var(--space-4);
-    padding-bottom: var(--space-12);
-    max-width: var(--breakpoint-8);
+  min-height: 90vh;
+  margin-inline: auto;
+  padding-block: var(--space-8);
+  width: min(calc(100vw - var(--space-6) * 2), 1280px);
+
+  @media (min-width: 1024px) {
+    padding-block: var(--space-22);
+  }
+`;
+
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+
+  margin-inline: auto;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+  
+  & > * {
+    color: var(--clr-brand-700);
+  }
+
+  & > span.material-icons-round {
+    animation: var(--animation-spin);
+    background-color: var(--clr-brand-700);
+    border-radius: var(--border-radius-full);
+    color: var(--clr-brand-50);
+    height: var(--space-12);
+    width: var(--space-12);
+  }
+
+  @media (min-width: 1024px) {
+    gap: var(--space-4);
   }
 `;
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <Page>
       <Head>
         <title>ClassLoops</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,13 +68,35 @@ const Home: NextPage = () => {
 
       <Header />
 
-      <Main>
-        <HeroTextContent />
-        <HeroImages />
-      </Main>
+      <main>
+        <Section>
+          <Card className="card">
+            <span className="material-icons-round font-20">loop</span>
+            <h2 className="font-14 font-weight-10">
+              Easily loop exercise demo videos during your classes.
+            </h2>
+            <Screenshot />
+            <p className="font-6">
+              Simultaneously loop up to 9 <span className="font-weight-10">YouTube</span> or <span className="font-weight-10">Vimeo</span> videos.
+            </p>
+            <p className="font-6">
+              Airplay from a phone, tablet, or computer to a TV in your studio.
+            </p>
+            <a
+              href="https://app.classloops.com/sign-up"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button>
+                Get started
+              </button>
+            </a>
+          </Card>
+        </Section>
+      </main>
 
       <Footer />
-    </div>
+    </Page>
   );
 };
 

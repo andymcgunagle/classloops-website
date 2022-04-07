@@ -41,3 +41,47 @@
 .font-20 {
   font-size: var(--font-size-20) !important;
 }
+
+p.font-0 * {
+  font-size: var(--font-size-0) !important;
+}
+
+p.font-2 * {
+  font-size: var(--font-size-2) !important;
+}
+
+p.font-4 * {
+  font-size: var(--font-size-4) !important;
+}
+
+p.font-6 * {
+  font-size: var(--font-size-6) !important;
+}
+
+p.font-8 * {
+  font-size: var(--font-size-8) !important;
+}
+
+p.font-10 * {
+  font-size: var(--font-size-10) !important;
+}
+
+p.font-12 * {
+  font-size: var(--font-size-12) !important;
+}
+
+p.font-14 * {
+  font-size: var(--font-size-14) !important;
+}
+
+p.font-16 * {
+  font-size: var(--font-size-16) !important;
+}
+
+p.font-18 * {
+  font-size: var(--font-size-18) !important;
+}
+
+p.font-20 * {
+  font-size: var(--font-size-20) !important;
+}

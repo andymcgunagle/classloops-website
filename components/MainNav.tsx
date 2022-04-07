@@ -15,6 +15,7 @@ const Nav = styled.nav<MainNavProps>`
   box-shadow: var(--box-shadow-8);
   padding: var(--space-6);
   border: var(--border-width-2) solid var(--clr-brand-700);
+  z-index: 1;
 
   @media only screen and (min-width: 768px) {
     display: flex;

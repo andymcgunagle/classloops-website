@@ -2,6 +2,7 @@
   background-color: var(--clr-white);
   border-radius: var(--border-radius-6);
   box-shadow: var(--box-shadow-8);
+  height: fit-content;
   padding: var(--space-6);
 }
 

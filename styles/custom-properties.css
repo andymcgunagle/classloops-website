@@ -169,4 +169,9 @@
   --space-16: clamp(6rem, 5.8rem + 1vw, 7rem);
   --space-18: clamp(7rem, 6.8rem + 1vw, 8rem);
   --space-20: clamp(8rem, 7.8rem + 1vw, 9rem);
+  --space-22: clamp(9rem, 8.8rem + 1vw, 10rem);
+  --space-24: clamp(10rem, 9.8rem + 1vw, 11rem);
+  --space-26: clamp(11rem, 10.8rem + 1vw, 12rem);
+  --space-28: clamp(12rem, 11.8rem + 1vw, 13rem);
+  --space-30: clamp(13rem, 12.8rem + 1vw, 14rem);
 }
