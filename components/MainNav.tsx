@@ -37,24 +37,24 @@ export default function MainNav({
 }: MainNavProps) {
   return (
     <Nav showMainNav={showMainNav}>
-      <button className="text">
-        <a
-          href="https://app.classloops.com/sign-in"
-          target="_blank"
-          rel="noreferrer"
-        >
+      <a
+        href="https://app.classloops.com/sign-in"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <button className="text">
           Log In
-        </a>
-      </button>
-      <button>
-        <a
-          href="https://app.classloops.com/sign-up"
-          target="_blank"
-          rel="noreferrer"
-        >
+        </button>
+      </a>
+      <a
+        href="https://app.classloops.com/sign-up"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <button>
           Free Trial
-        </a>
-      </button>
+        </button>
+      </a>
     </Nav>
   );
 };
