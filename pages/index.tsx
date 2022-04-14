@@ -18,7 +18,7 @@ const Section = styled.section`
 
   min-height: 90vh;
   margin-inline: auto;
-  padding-block: 2rem;
+  padding-block: 1rem;
   width: min(calc(100vw - 2rem), 1280px);
 `;
 
@@ -26,9 +26,9 @@ const Home: NextPage = () => {
   return (
     <Page>
       <Head>
-        <title>ClassLoops</title>
+        <title>ClassLoops: Software for Group Fitness Studios</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Software that enables fitness studios to loop multiple exercise demo videos on a TV during their classes." />
+        <meta name="description" content="Software that enables group fitness studios to loop multiple exercise demo videos and stream them to a TV during their fitness classes." />
       </Head>
 
       <Header />

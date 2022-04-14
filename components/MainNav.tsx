@@ -7,7 +7,7 @@ const Nav = styled.nav<MainNavProps>`
   gap: 2rem;
   
   position: absolute;
-  top: 5.5rem;
+  top: 5.25rem;
   right: 1rem;
   
   background-color: var(--color-white);

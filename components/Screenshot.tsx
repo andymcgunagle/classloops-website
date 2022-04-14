@@ -26,7 +26,7 @@ export default function Screenshot() {
     <Wrapper>
       <Image
         src="/classloops-screenshot.png"
-        alt="classloops screenshot"
+        alt="ClassLoops screenshot"
         layout="responsive"
         objectFit="cover"
         width={1909}
