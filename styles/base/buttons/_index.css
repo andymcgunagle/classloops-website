@@ -1,0 +1,49 @@
+@import './helpers.css';
+@import './hover-styles.css';
+@import './light-buttons.css';
+@import './outlined-buttons.css';
+@import './text-buttons.css';
+  
+button {
+  background-color: var(--color-brand);
+  border-radius: var(--border-radius-2);
+  border: var(--border-width-2) solid var(--color-brand);
+  box-shadow: var(--box-shadow-2);
+  color: var(--color-gray-50);
+  cursor: pointer;
+  height: fit-content;
+  line-height: 1;
+  padding: 0.5rem 1rem;
+  transition: none;
+  user-select: none;
+  width: fit-content;
+}
+
+button * {
+  color: inherit;
+}
+  
+button:active {
+  box-shadow: none;
+  transform: scale(0.95);
+}
+
+button.standard.accent {
+  background-color: var(--color-accent);
+  border: var(--border-width-2) solid var(--color-accent);
+}
+
+button.standard.danger {
+  background-color: var(--color-danger);
+  border: var(--border-width-2) solid var(--color-danger);
+}
+  
+button.standard.success {
+  background-color: var(--color-success);
+  border: var(--border-width-2) solid var(--color-success);
+}
+
+button.standard.warning {
+  background-color: var(--color-warning);
+  border: var(--border-width-2) solid var(--color-warning);
+}

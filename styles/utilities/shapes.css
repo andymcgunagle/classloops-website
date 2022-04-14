@@ -1,0 +1,55 @@
+.shape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+}
+
+/* Shapes */
+
+.shape.circle {
+  border-radius: var(--border-radius-full);
+}
+
+.shape.square {
+  border-radius: var(--border-radius-4);
+}
+
+/* Sizes */
+
+.shape.small {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.shape.small * {
+  font-size: var(--font-size-0);
+}
+
+.shape.medium {
+  height: 2rem;
+  width: 2rem;
+}
+
+.shape.medium * {
+  font-size: var(--font-size-4);
+}
+
+.shape.large {
+  height: 3rem;
+  width: 3rem;
+}
+
+.shape.large * {
+  font-size: var(--font-size-6);
+}
+
+.shape.extra-large {
+  height: 4rem;
+  width: 4rem;
+}
+
+.shape.extra-large * {
+  font-size: var(--font-size-10);
+}

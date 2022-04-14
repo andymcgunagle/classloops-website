@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 const Wrapper = styled.button`
   position: absolute;
-  top: var(--space-4);
-  right: var(--space-6);
+  top: 1.75rem;
+  right: 1rem;
 
   @media only screen and (min-width: 768px) {
     display: none;

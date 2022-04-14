@@ -1,9 +1,9 @@
 input {
-  background-color: var(--clr-white);
+  background-color: var(--color-white);
   border-radius: var(--border-radius-0);
-  border: var(--border-width-2) solid var(--clr-gray-300);
+  border: var(--border-width-2) solid var(--color-gray-300);
   line-height: 1;
-  padding: var(--space-0) var(--space-2);
+  padding: 0.25rem 0.75rem;
   transition-duration: var(--duration-2);
   transition-property: background-color, border-bottom, border-color;
   transition-timing-function: ease-in;
@@ -11,22 +11,28 @@ input {
 }
   
 input:focus {
-  background-color: var(--clr-brand-50);
-  border: var(--border-width-2) solid var(--clr-brand-800);
-  color: var(--clr-brand-800) !important;
+  background-color: var(--color-brand-light);
+  border: var(--border-width-2) solid var(--color-brand-dark);
+  color: var(--color-brand-dark) !important;
   outline: none;
 }
 
 input::placeholder {
-  color: var(--clr-gray-300) !important;
+  color: var(--color-gray-300);
 }
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+/* Rounded */
 
 input.rounded {
   border-radius: var(--border-radius-full);
-  padding: var(--space-0) var(--space-4);
+  padding: 0.25rem 1rem;
 }
 
-/* Input with icon */
+/* With Icon */
 
 div.input-with-icon-wrapper {
   display: flex;
@@ -39,19 +45,19 @@ div.input-with-icon-wrapper {
 
 div.input-with-icon-wrapper > .material-icons-round {
   position: absolute;
-  left: 1rem;
-  top: 51%;
-  transform: translateY(-50%);
+  left: 0.75rem;
+  top: 50%;
 
-  font-size: var(--font-size-10);
+  font-size: var(--font-size-6);
   opacity: 0.25;
+  transform: translateY(-50%);
 }
 
 div.input-with-icon-wrapper:focus-within > .material-icons-round {
-  color: var(--clr-brand-800) !important;
+  color: var(--color-brand-dark) !important;
   opacity: 0.5;
 }
 
 input.with-icon {
-  padding-left: clamp(2.75rem, 2.7rem + 0.25vw, 3rem);
+  padding-left: 2.5rem;
 }

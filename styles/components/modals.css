@@ -4,13 +4,13 @@
   top: 50%;
 
   transform: translate(-50%, -50%);
-  width: calc(100% - var(--space-2) * 2);
+  width: calc(100% - 1rem * 2);
   max-width: 600px;
 }
 
 .modal.top {
   position: absolute;
-  top: var(--space-2);
+  top: 1rem;
   left: 0;
   right: 0;
   bottom: 0;

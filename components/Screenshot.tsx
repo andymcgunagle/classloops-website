@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   animation: var(--animation-slide-in-right);
-  background-color: var(--clr-white);
-  background-color: var(--clr-white);
+  background-color: var(--color-white);
+  background-color: var(--color-white);
   border-radius: var(--border-radius-4);
-  border: var(--border-width-10) solid var(--clr-gray-700);
+  border: var(--border-width-10) solid var(--color-brand);
   box-shadow: var(--box-shadow-4);
   width: 100%;
   

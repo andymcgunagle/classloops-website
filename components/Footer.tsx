@@ -3,19 +3,19 @@ import LogoAndName from "./LogoAndName";
 import styled from 'styled-components';
 
 const Wrapper = styled.footer`
-  background-color: var(--clr-brand-700);
-  padding: var(--space-6);
+  background-color: var(--color-brand-700);
+  padding: 1rem;
   
   & > .inner-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: var(--space-2);
+    gap: 0.5rem;
   }
 
   & * {
-    color: var(--clr-white);
+    color: var(--color-white);
   }
 `;
 

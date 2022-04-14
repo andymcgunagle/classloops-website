@@ -4,23 +4,23 @@ const Nav = styled.nav<MainNavProps>`
   display: ${props => props.showMainNav ? "flex" : "none"};
   flex-direction: column;
   align-items: flex-end;
-  gap: var(--space-6);
+  gap: 2rem;
   
   position: absolute;
-  top: var(--space-14);
-  right: var(--space-6);
+  top: 5.5rem;
+  right: 1rem;
   
-  background-color: var(--clr-white);
+  background-color: var(--color-white);
   border-radius: var(--border-radius-2);
   box-shadow: var(--box-shadow-8);
-  padding: var(--space-6);
-  border: var(--border-width-2) solid var(--clr-brand-700);
+  padding: 2rem 2rem;
+  border: var(--border-width-2) solid var(--color-brand-dark);
   z-index: 1;
 
   @media only screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
-    gap: var(--space-4);
+    gap: 1rem;
 
     position: static;
 

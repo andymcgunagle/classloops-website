@@ -3,12 +3,11 @@ import Head from 'next/head';
 
 import styled from 'styled-components';
 
-import Footer from '../components/Footer';
 import Header from '../components/Header';
 import HeroCard from '../components/HeroCard';
 
 const Page = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh - 2rem);
 `;
 
 const Section = styled.section`
@@ -19,12 +18,8 @@ const Section = styled.section`
 
   min-height: 90vh;
   margin-inline: auto;
-  padding-block: var(--space-8);
-  width: min(calc(100vw - var(--space-6) * 2), 1280px);
-
-  @media (min-width: 1024px) {
-    padding-block: var(--space-22);
-  }
+  padding-block: 2rem;
+  width: min(calc(100vw - 2rem), 1280px);
 `;
 
 const Home: NextPage = () => {
@@ -43,8 +38,6 @@ const Home: NextPage = () => {
           <HeroCard />
         </Section>
       </main>
-
-      <Footer />
     </Page>
   );
 };

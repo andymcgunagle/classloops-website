@@ -1,0 +1,33 @@
+button.outlined {
+  background-color: transparent;
+  border-color: var(--color-brand);
+  color: var(--color-brand) !important;
+  transition-duration: var(--duration-2);
+  transition-property: background-color, border-color, color;
+  transition-timing-function: ease-in;
+}
+    
+button.outlined.accent {
+  border-color: var(--color-accent);
+  color: var(--color-accent) !important;
+}
+
+button.outlined.danger {
+  border-color: var(--color-danger);
+  color: var(--color-danger) !important;
+}
+  
+button.outlined.gray {
+  border-color: var(--color-gray);
+  color: var(--color-gray) !important;
+}
+  
+button.outlined.success {
+  border-color: var(--color-success);
+  color: var(--color-success) !important;
+}
+
+button.outlined.warning {
+  border-color: var(--color-warning);
+  color: var(--color-warning) !important;
+}

@@ -7,8 +7,14 @@ import MenuButton from "./MenuButton";
 import styled from 'styled-components';
 
 const Wrapper = styled.header`
-  animation: var(--animation-slide-in-down), var(--animation-fade-in);
-  padding: var(--space-6);
+  animation: var(--animation-fade-in);
+  width: min(calc(100vw - 2rem), 1280px);
+  margin-inline: auto;
+  padding-block: 1rem;
+
+  @media only screen and (min-width: 768px) {
+    padding-block: 0;
+  }
 `;
 
 export default function Header() {

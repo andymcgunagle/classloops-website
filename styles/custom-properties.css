@@ -19,7 +19,7 @@
   --animation-slide-out-left: slide-out-left 0.5s ease-in;
   --animation-slide-out-right: slide-out-right 0.5s ease-in;
   --animation-slide-out-up: slide-out-up 0.5s ease-in;
-  --animation-spin: spin 7.5s linear infinite;
+  --animation-spin: spin 5s linear infinite;
 
   /* Border Radius */
   --border-radius-0: 0.25rem;
@@ -50,104 +50,56 @@
   --breakpoint-0: 480px;
   --breakpoint-2: 640px;
   --breakpoint-4: 768px;
-  --breakpoint-6: 1024px;
+  --breakpoint-6: 1280px;
   --breakpoint-8: 1280px;
   --breakpoint-10: 1536px;
 
   /* Color - Brand */
-  --clr-brand-50: hsl(210, 40%, 98%);
-  --clr-brand-100: hsl(210, 40%, 96%);
-  --clr-brand-200: hsl(214, 32%, 91%);
-  --clr-brand-300: hsl(213, 27%, 84%);
-  --clr-brand-400: hsl(215, 20%, 65%);
-  --clr-brand-500: hsl(215, 16%, 47%);
-  --clr-brand-600: hsl(215, 19%, 35%);
-  --clr-brand-700: hsl(215, 25%, 27%);
-  --clr-brand-800: hsl(217, 33%, 17%);
-  --clr-brand-900: hsl(222, 47%, 11%);
+  --color-brand-light: hsl(234, 35%, 95%);
+  --color-brand: hsl(234, 20%, 30%);
+  --color-brand-dark: hsl(234, 25%, 10%);
   
   /* Color - Accent */
-  --clr-accent-50: #faf5ff;
-  --clr-accent-100: #f3e8ff;
-  --clr-accent-200: #e9d5ff;
-  --clr-accent-300: #d8b4fe;
-  --clr-accent-400: #c084fc;
-  --clr-accent-500: #a855f7;
-  --clr-accent-600: #9333ea;
-  --clr-accent-700: #7e22ce;
-  --clr-accent-800: #6b21a8;
-  --clr-accent-900: #581c87;
-  
-  /* Color - Grays */
-  --clr-white: hsl(0, 0%, 100%);
-  --clr-gray-50: hsl(210, 40%, 98%);
-  --clr-gray-100: hsl(210, 40%, 96%);
-  --clr-gray-200: hsl(214, 32%, 91%);
-  --clr-gray-300: hsl(213, 27%, 84%);
-  --clr-gray-400: hsl(215, 20%, 65%);
-  --clr-gray-500: hsl(215, 16%, 47%);
-  --clr-gray-600: hsl(215, 19%, 35%);
-  --clr-gray-700: hsl(215, 25%, 27%);
-  --clr-gray-800: hsl(217, 33%, 17%);
-  --clr-gray-900: hsl(222, 47%, 11%);
-  --clr-black: hsl(0, 0%, 0%);
-  
+  --color-accent-light: hsl(13, 65%, 85%);
+  --color-accent: hsl(13, 68%, 63%);
+  --color-accent-dark: hsl(13, 55%, 40%);
+
   /* Color - Success */
-  --clr-success-50: #f0fdf4;
-  --clr-success-100: #dcfce7;
-  --clr-success-200: #bbf7d0;
-  --clr-success-300: #86efac;
-  --clr-success-400: #4ade80;
-  --clr-success-500: #22c55e;
-  --clr-success-600: #16a34a;
-  --clr-success-700: #15803d;
-  --clr-success-800: #166534;
-  --clr-success-900: #14532d;
+  --color-success-light: #dcfce7;
+  --color-success: #16a34a;
+  --color-success-dark: #166534;
   
   /* Color - Warning */
-  --clr-warning-50: #fefce8;
-  --clr-warning-100: #fef9c3;
-  --clr-warning-200: #fef08a;
-  --clr-warning-300: #fde047;
-  --clr-warning-400: #facc15;
-  --clr-warning-500: #eab308;
-  --clr-warning-600: #ca8a04;
-  --clr-warning-700: #a16207;
-  --clr-warning-800: #854d0e;
-  --clr-warning-900: #713f12;
+  --color-warning-light: #fef9c3;
+  --color-warning: #eab308;
+  --color-warning-dark: #a16207;
   
   /* Color - Danger */
-  --clr-danger-50: #fef2f2;
-  --clr-danger-100: #fee2e2;
-  --clr-danger-200: #fecaca;
-  --clr-danger-300: #fca5a5;
-  --clr-danger-400: #f87171;
-  --clr-danger-500: #ef4444;
-  --clr-danger-600: #dc2626;
-  --clr-danger-700: #b91c1c;
-  --clr-danger-800: #991b1b;
-  --clr-danger-900: #7f1d1d;
-
-  /* Durations */
-  --duration-0: 0.125s;
-  --duration-2: 0.25s;
-  --duration-4: 00.5s;
-  --duration-6: 00.75s;
-  --duration-8: 0.1s;
-  --duration-10: 0.2s;
+  --color-danger-light: #fee2e2;
+  --color-danger: #ef4444;
+  --color-danger-dark: #991b1b;
   
+  /* Color - Grays */
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray-50: hsl(210, 40%, 98%);
+  --color-gray-100: hsl(210, 40%, 96%);
+  --color-gray-200: hsl(214, 32%, 91%);
+  --color-gray-300: hsl(213, 27%, 84%);
+  --color-gray-400: hsl(215, 20%, 65%);
+  --color-gray-500: hsl(215, 16%, 47%);
+  --color-gray-600: hsl(215, 19%, 35%);
+  --color-gray-700: hsl(215, 25%, 27%);
+  --color-gray-800: hsl(217, 33%, 17%);
+  --color-gray-900: hsl(222, 47%, 11%);
+  --color-black: hsl(0, 0%, 0%);
+
   /* Font Sizes - https://royalfig.github.io/fluid-typography-calculator/ */
-  --font-size-0: clamp(0.70rem, 0.69rem + 0.05vw, 0.75rem);
-  --font-size-2: clamp(0.75rem, 0.725rem + 0.125vw, 0.875rem);
-  --font-size-4: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
-  --font-size-6: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
-  --font-size-8: clamp(1.125rem, 1.1rem + 0.125vw, 1.25rem);
-  --font-size-10: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
-  --font-size-12: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
-  --font-size-14: clamp(2rem, 1.9rem + 0.5vw, 2.5rem);
-  --font-size-16: clamp(2.5rem, 2.4rem + 0.5vw, 3rem);
-  --font-size-18: clamp(3rem, 2.9rem + 0.5vw, 3.5rem);
-  --font-size-20: clamp(3.5rem, 3.4rem + 0.5vw, 4rem);
+  --font-size-0: 0.875rem;
+  --font-size-2: 1rem;
+  --font-size-4: 1.25rem;
+  --font-size-6: 1.5rem;
+  --font-size-8: 1.75rem;
+  --font-size-10: 2rem;
   
   /* Font Weights */
   --font-weight-0: 100;
@@ -156,22 +108,4 @@
   --font-weight-6: 600;
   --font-weight-8: 700;
   --font-weight-10: 800;
-
-  /* Space - https://royalfig.github.io/fluid-typography-calculator/ */
-  --space-0: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
-  --space-2: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
-  --space-4: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
-  --space-6: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
-  --space-8: clamp(2rem, 1.8rem + 1vw, 3rem);
-  --space-10: clamp(3rem, 2.8rem + 0.5vw, 4rem);
-  --space-12: clamp(4rem, 3.8rem + 1vw, 5rem);
-  --space-14: clamp(5rem, 4.8rem + 1vw, 6rem);
-  --space-16: clamp(6rem, 5.8rem + 1vw, 7rem);
-  --space-18: clamp(7rem, 6.8rem + 1vw, 8rem);
-  --space-20: clamp(8rem, 7.8rem + 1vw, 9rem);
-  --space-22: clamp(9rem, 8.8rem + 1vw, 10rem);
-  --space-24: clamp(10rem, 9.8rem + 1vw, 11rem);
-  --space-26: clamp(11rem, 10.8rem + 1vw, 12rem);
-  --space-28: clamp(12rem, 11.8rem + 1vw, 13rem);
-  --space-30: clamp(13rem, 12.8rem + 1vw, 14rem);
 }

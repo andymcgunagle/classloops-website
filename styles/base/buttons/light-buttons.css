@@ -1,0 +1,38 @@
+button.light {
+  background-color: var(--color-brand-light);
+  border-color: var(--color-brand-light);
+  color: var(--color-brand-dark) !important;
+  transition-duration: var(--duration-2);
+  transition-property: background-color, border-color, color;
+  transition-timing-function: ease-in;
+}
+
+button.light.accent {
+  background-color: var(--color-accent-light);
+  border: var(--border-width-2) solid var(--color-accent-light);
+  color: var(--color-accent-dark) !important;
+}
+
+button.light.danger {
+  background-color: var(--color-danger-light);
+  border: var(--border-width-2) solid var(--color-danger-light);
+  color: var(--color-danger-dark) !important;
+}
+
+button.light.gray {
+  background-color: var(--color-gray-light);
+  border: var(--border-width-2) solid var(--color-gray-light);
+  color: var(--color-gray-800) !important;
+}
+
+button.light.success {
+  background-color: var(--color-success-light);
+  border: var(--border-width-2) solid var(--color-success-light);
+  color: var(--color-success-dark) !important;
+}
+
+button.light.warning {
+  background-color: var(--color-warning-light);
+  border: var(--border-width-2) solid var(--color-warning-light);
+  color: var(--color-warning-dark) !important;
+}
