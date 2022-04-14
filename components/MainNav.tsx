@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 const Nav = styled.nav<MainNavProps>`
@@ -37,6 +38,11 @@ export default function MainNav({
 }: MainNavProps) {
   return (
     <Nav showMainNav={showMainNav}>
+      <Link href="/about" passHref>
+        <button className="text">
+          About
+        </button>
+      </Link>
       <a
         href="https://app.classloops.com/sign-in"
         target="_blank"

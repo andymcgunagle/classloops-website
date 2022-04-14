@@ -25,9 +25,14 @@ export default function Header() {
       <div className="inner-wrapper row-between items-center">
         <div>
           <LogoAndName />
-          <MenuButton setShowMainNav={setShowMainNav} showMainNav={showMainNav} />
+          <MenuButton
+            setShowMainNav={setShowMainNav}
+            showMainNav={showMainNav}
+          />
         </div>
-        <MainNav showMainNav={showMainNav} />
+        <MainNav
+          showMainNav={showMainNav}
+        />
       </div>
     </Wrapper>
   );
