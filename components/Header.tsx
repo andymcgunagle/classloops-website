@@ -9,11 +9,12 @@ import styled from 'styled-components';
 const Wrapper = styled.header`
   animation: var(--animation-fade-in);
   margin-inline: auto;
-  padding-block: 1rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
   width: min(calc(100vw - 2rem), 1280px);
 
   @media only screen and (min-width: 768px) {
-    padding-block: 0;
+    padding-top: 0;
   }
 `;
 

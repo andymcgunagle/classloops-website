@@ -4,9 +4,9 @@ import Head from "next/head";
 
 import styled from "styled-components";
 
-import Layout from "../components/Layout";
 import Avatar from "../components/Avatar";
 import FreeTrialButton from "../components/FreeTrialButton";
+import Layout from "../components/Layout";
 
 const Section = styled.section`
   display: flex;
@@ -14,9 +14,7 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
 
-  min-height: 90vh;
   margin-inline: auto;
-  padding-block: 1rem;
   width: min(calc(100vw - 2rem), 1280px);
 `;
 

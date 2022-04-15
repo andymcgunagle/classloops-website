@@ -11,7 +11,6 @@ const Section = styled.section`
 
   min-height: 90vh;
   margin-inline: auto;
-  padding-block: 1rem;
   width: min(calc(100vw - 2rem), 1280px);
 `;
 
