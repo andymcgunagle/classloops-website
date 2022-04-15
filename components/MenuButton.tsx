@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.button`
@@ -14,6 +16,12 @@ export default function MenuButton({
   setShowMainNav,
   showMainNav,
 }: MenuButtonProps) {
+  const { events } = useRouter();
+
+  useEffect(() => {
+    events.on('routeChangeComplete', () => setShowMainNav(false));
+  }, [events, setShowMainNav]);
+
   return (
     <Wrapper
       onClick={() => setShowMainNav(!showMainNav)}

@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 import Layout from "../components/Layout";
 import Avatar from "../components/Avatar";
+import FreeTrialButton from "../components/FreeTrialButton";
 
 const Section = styled.section`
   display: flex;
@@ -114,15 +115,7 @@ export default function About() {
             <p>
               My hope is that ClassLoops helps you provide even more value to your class attendees. <span className="font-weight-8">Thanks for everything you do to make the world a healthier and happier place 🙌</span>
             </p>
-            <a
-              href="https://app.classloops.com/sign-up"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button>
-                Free Trial
-              </button>
-            </a>
+            <FreeTrialButton />
           </Card>
         </Section>
       </main>

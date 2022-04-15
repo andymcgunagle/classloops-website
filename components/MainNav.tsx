@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+import FreeTrialButton from './FreeTrialButton';
 
 const Nav = styled.nav<MainNavProps>`
   display: ${props => props.showMainNav ? "flex" : "none"};
@@ -38,7 +39,7 @@ export default function MainNav({
 }: MainNavProps) {
   return (
     <Nav showMainNav={showMainNav}>
-      <Link href="/about" passHref>
+      <Link href="/about" passHref replace>
         <button className="text">
           About
         </button>
@@ -52,15 +53,7 @@ export default function MainNav({
           Log In
         </button>
       </a>
-      <a
-        href="https://app.classloops.com/sign-up"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <button>
-          Free Trial
-        </button>
-      </a>
+      <FreeTrialButton />
     </Nav>
   );
 };
