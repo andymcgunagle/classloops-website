@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import FreeTrialButton from './FreeTrialButton';
 
+import FreeTrialButton from './FreeTrialButton';
 import Screenshot from './Screenshot';
 
 const Section = styled.section`
@@ -9,7 +9,7 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
 
-  min-height: 90vh;
+  min-height: calc(90vh - 1rem);
   margin-inline: auto;
   width: min(calc(100vw - 2rem), 1280px);
 `;
@@ -38,17 +38,17 @@ const Card = styled.div`
 `;
 
 const Icon = styled.span`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 
   animation: var(--animation-spin);
   background-color: var(--color-brand);
   border-radius: var(--border-radius-full);
   color: var(--color-brand-light);
-  height: 4rem;
-  width: 4rem;
-  font-size: 3rem;
+  height: 4rem !important;
+  width: 4rem !important;
+  font-size: 3rem !important;
 `;
 
 export default function HeroSection() {
