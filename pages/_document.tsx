@@ -7,6 +7,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+          <link rel="shortcut icon" href="/classloops-logo-with-background.png" />
         </Head>
         <body>
           <Main />
