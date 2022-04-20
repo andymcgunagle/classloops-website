@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   background-color: var(--color-white);
-  background-color: var(--color-white);
   border-radius: var(--border-radius-2);
   border: var(--border-width-10) solid var(--color-brand);
   box-shadow: var(--box-shadow-4);
@@ -20,8 +19,8 @@ export default function Screenshot() {
         alt="ClassLoops screenshot"
         layout="responsive"
         objectFit="cover"
-        width={1909}
-        height={922}
+        width={3584}
+        height={1889}
       />
     </Wrapper>
   );

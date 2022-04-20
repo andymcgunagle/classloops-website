@@ -56,18 +56,24 @@ export default function HeroSection() {
     <Section>
       <Card>
         <Icon className="material-icons-round">loop</Icon>
-        <h2 className="font-10 font-weight-10">
+        <h2 className="font-10 font-weight-8">
           Easily loop exercise demo videos during your classes.
         </h2>
         <Screenshot />
         <p>
-          Simultaneously loop up to 9 <span className="font-weight-10">YouTube</span> or <span className="font-weight-10">Vimeo</span> videos.
+          Simultaneously loop up to 12 <span className="font-weight-8">YouTube</span> or <span className="font-weight-8">Vimeo</span> videos.
         </p>
         <p>
-          <span className="font-weight-10">Airplay</span> from a phone, tablet, or computer to a TV in your studio.
+          <span className="font-weight-8">Airplay</span> from a phone, tablet, or computer to a TV in your studio.
         </p>
         <p>
-          Add your own <span className="font-weight-10">custom branding</span> in minutes.
+          Video library with <span className="font-weight-8">1000+</span> high-quality demo videos.
+        </p>
+        <p>
+          <span className="font-weight-8">Add your own videos</span> with the YouTube or Vimeo URL - no uploading required.
+        </p>
+        <p>
+          Add your own <span className="font-weight-8">custom branding</span> in minutes.
         </p>
         <FreeTrialButton />
       </Card>
