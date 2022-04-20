@@ -20,7 +20,7 @@ export default function Screenshot() {
         layout="responsive"
         objectFit="cover"
         width={3584}
-        height={1889}
+        height={1887}
       />
     </Wrapper>
   );

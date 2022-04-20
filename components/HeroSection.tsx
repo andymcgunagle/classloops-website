@@ -60,21 +60,23 @@ export default function HeroSection() {
           Easily loop exercise demo videos during your classes.
         </h2>
         <Screenshot />
-        <p>
-          Simultaneously loop up to 12 <span className="font-weight-8">YouTube</span> or <span className="font-weight-8">Vimeo</span> videos.
-        </p>
-        <p>
-          <span className="font-weight-8">Airplay</span> from a phone, tablet, or computer to a TV in your studio.
-        </p>
-        <p>
-          Video library with <span className="font-weight-8">1000+</span> high-quality demo videos.
-        </p>
-        <p>
-          <span className="font-weight-8">Add your own videos</span> with the YouTube or Vimeo URL - no uploading required.
-        </p>
-        <p>
-          Add your own <span className="font-weight-8">custom branding</span> in minutes.
-        </p>
+        <ul>
+          <li>
+            Simultaneously loop up to 12 <span className="font-weight-8">YouTube</span> or <span className="font-weight-8">Vimeo</span> videos.
+          </li>
+          <li>
+            <span className="font-weight-8">Airplay</span> from a phone, tablet, or computer to a TV in your studio.
+          </li>
+          <li>
+            <span className="font-weight-8">1000+</span> high-quality exercise demo videos preloaded.
+          </li>
+          <li>
+            <span className="font-weight-8">Add your own videos</span> using their YouTube or Vimeo link - no uploading required.
+          </li>
+          <li>
+            Add your own <span className="font-weight-8">custom branding</span> in minutes.
+          </li>
+        </ul>
         <FreeTrialButton />
       </Card>
     </Section>
