@@ -2,14 +2,14 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import FreeTrialButton from './FreeTrialButton';
 
-const Nav = styled.nav<MainNavProps>`
+const Nav = styled.nav<{ showMainNav: boolean; }>`
   display: ${props => props.showMainNav ? "flex" : "none"};
   flex-direction: column;
   align-items: flex-end;
   gap: 2rem;
   
   position: absolute;
-  top: 5.25rem;
+  top: 4.5rem;
   right: 1rem;
   
   background-color: var(--color-white);
@@ -35,10 +35,11 @@ const Nav = styled.nav<MainNavProps>`
 `;
 
 export default function MainNav({
+  mainNavRef,
   showMainNav
 }: MainNavProps) {
   return (
-    <Nav showMainNav={showMainNav}>
+    <Nav ref={mainNavRef} showMainNav={showMainNav}>
       <Link href="/about" passHref replace>
         <button className="text">
           About
@@ -59,5 +60,6 @@ export default function MainNav({
 };
 
 interface MainNavProps {
+  mainNavRef: React.RefObject<HTMLElement>,
   showMainNav: boolean,
 };

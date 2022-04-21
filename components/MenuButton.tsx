@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.button`
   position: absolute;
-  top: 1.75rem;
+  top: 0.75rem;
   right: 1rem;
 
   @media only screen and (min-width: 768px) {
@@ -17,6 +17,7 @@ const Wrapper = styled.button`
 export default function MenuButton({
   setShowMainNav,
   showMainNav,
+  menuButtonRef,
 }: MenuButtonProps) {
   const { events } = useRouter();
 
@@ -26,8 +27,9 @@ export default function MenuButton({
 
   return (
     <Wrapper
-      onClick={() => setShowMainNav(!showMainNav)}
       className="shape circle large"
+      onClick={() => setShowMainNav(!showMainNav)}
+      ref={menuButtonRef}
     >
       <span className="material-icons-round">
         {showMainNav ? 'close' : 'menu'}
@@ -39,4 +41,5 @@ export default function MenuButton({
 interface MenuButtonProps {
   setShowMainNav: React.Dispatch<React.SetStateAction<boolean>>,
   showMainNav: boolean,
+  menuButtonRef: React.RefObject<HTMLButtonElement>,
 };

@@ -65,13 +65,13 @@ export default function HeroSection() {
             Simultaneously loop up to 12 <span className="font-weight-8">YouTube</span> or <span className="font-weight-8">Vimeo</span> videos.
           </li>
           <li>
-            <span className="font-weight-8">Airplay</span> from a phone, tablet, or computer to a TV in your studio.
+            <span className="font-weight-8">Airplay</span> or <span className="font-weight-8">Chromecast</span> from a phone, tablet, or computer to a TV in your studio.
           </li>
           <li>
             <span className="font-weight-8">1000+</span> high-quality exercise demo videos preloaded.
           </li>
           <li>
-            <span className="font-weight-8">Add your own videos</span> using their YouTube or Vimeo link - no uploading required.
+            <span className="font-weight-8">Add your own videos</span> using their YouTube or Vimeo links - no uploading required.
           </li>
           <li>
             Add your own <span className="font-weight-8">custom branding</span> in minutes.
