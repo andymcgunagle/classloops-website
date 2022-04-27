@@ -32,14 +32,14 @@ export default function Header() {
         <div>
           <LogoAndName />
           <MenuButton
+            menuButtonRef={menuButtonRef}
             setShowMainNav={setShowMainNav}
             showMainNav={showMainNav}
-            menuButtonRef={menuButtonRef}
           />
         </div>
         <MainNav
-          showMainNav={showMainNav}
           mainNavRef={mainNavRef}
+          showMainNav={showMainNav}
         />
       </div>
     </Wrapper>

@@ -1,7 +1,10 @@
+import { useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import FreeTrialButton from './FreeTrialButton';
 import Screenshot from './Screenshot';
+import Video from './Video';
+import WatchDemoButton from './WatchDemoButton';
 
 const Section = styled.section`
   display: flex;
@@ -51,7 +54,15 @@ const Icon = styled.span`
   font-size: 3rem !important;
 `;
 
+const Container = styled.div`
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+`;
+
 export default function HeroSection() {
+
+
   return (
     <Section>
       <Card>
@@ -77,7 +88,10 @@ export default function HeroSection() {
             Add your own <span className="font-weight-8">custom branding</span> in minutes.
           </li>
         </ul>
-        <FreeTrialButton />
+        <Container>
+          <WatchDemoButton />
+          <FreeTrialButton />
+        </Container>
       </Card>
     </Section>
   );

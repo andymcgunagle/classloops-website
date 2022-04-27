@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import FreeTrialButton from './FreeTrialButton';
+import WatchDemoButton from './WatchDemoButton';
 
 const Nav = styled.nav<{ showMainNav: boolean; }>`
   display: ${props => props.showMainNav ? "flex" : "none"};
@@ -36,7 +37,7 @@ const Nav = styled.nav<{ showMainNav: boolean; }>`
 
 export default function MainNav({
   mainNavRef,
-  showMainNav
+  showMainNav,
 }: MainNavProps) {
   return (
     <Nav ref={mainNavRef} showMainNav={showMainNav}>

@@ -21,6 +21,7 @@ export default function Screenshot() {
         objectFit="cover"
         width={3584}
         height={1887}
+        priority={true}
       />
     </Wrapper>
   );
