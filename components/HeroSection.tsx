@@ -1,10 +1,8 @@
-import { useRef, useState } from 'react';
-import styled from 'styled-components';
-
 import FreeTrialButton from './FreeTrialButton';
 import Screenshot from './Screenshot';
-import Video from './Video';
 import WatchDemoButton from './WatchDemoButton';
+
+import styled from 'styled-components';
 
 const Section = styled.section`
   display: flex;
@@ -58,6 +56,7 @@ const Container = styled.div`
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export default function HeroSection() {
